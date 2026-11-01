@@ -193,5 +193,99 @@
 
 ---
 
+
 <br />
 <br />
+
+<a name="ticket-83"></a>
+<h1>Ticket #83 — Access Active Directory Services</h1>
+
+<h2>Languages and Utilities Used</h2>
+- <b>Remote Desktop Connection (RDP)</b>
+- <b>Active Directory Users and Computers</b>
+
+<h2>Environments Used</h2>
+- <b>Windows Server (Active Directory domain controller, sandbox.prod)</b>
+- <b>Windows client (Remote Desktop)</b>
+<br />
+<h2>Project walk-through:</h2>
+
+**Objective:** Enhance system administration skills through identity management using Active Directory.
+
+**Instructions:**
+1. Use the Remote Desktop Client (Windows or Mac) to connect to Active Directory services running on Windows Server.
+2. Check the wiki page for step-by-step guidance.
+
+<br />
+<br />
+<br />
+<p align="center">
+<b>Creating a new user, Eric Quaye (logon name equaye), in the Rquaye-VITI OU (other users' OUs redacted):</b>
+<br/>
+<img width="683" height="406" alt="image" src="https://github.com/user-attachments/assets/d4866dad-a4c3-467b-bd67-90f61491a23c" />
+
+
+</p>
+
+<br />
+<br />
+<br />
+<p align="center">
+<b>Reviewing the new user before finishing; the password must be changed at next logon (other users' OUs redacted):</b>
+<br/>
+<img width="655" height="392" alt="image" src="https://github.com/user-attachments/assets/dfe338ce-bb2a-4d0a-ac12-9a02a9436cc6" />
+
+
+</p>
+
+<br />
+<br />
+<br />
+<p align="center">
+<b>Right-clicking Rquaye-VITI &gt; New &gt; Group (other users' OUs redacted):</b>
+<br/>
+<img width="637" height="378" alt="image" src="https://github.com/user-attachments/assets/a75871a1-35db-4247-98eb-ad207fdd9b14" />
+
+
+</p>
+
+<br />
+<br />
+<br />
+<p align="center">
+<b>Creating the security group rquaye-catalog (Global scope, Security type) (other users' OUs redacted):</b>
+<br/>
+<img width="530" height="520" alt="image" src="https://github.com/user-attachments/assets/91bd1a65-f25a-4e47-9f9f-83c19e21fed1" />
+
+
+</p>
+
+<br />
+<br />
+<br />
+<p align="center">
+<b>The Rquaye-VITI OU now holds the groups rquaye-apprentices and rquaye-catalog and the users Jim Test and Eric Quaye (other users' OUs redacted):</b>
+<br/>
+<img width="851" height="541" alt="image" src="https://github.com/user-attachments/assets/1fcfd757-2c87-4971-aa65-39c91c0cc300" />
+
+
+</p>
+
+<br />
+<br />
+<br />
+
+<b><u>Solution:</u></b> I connected to the Active Directory server (DC01.sandbox.prod) with Remote Desktop, the same way as in <a href="#ticket-82">Ticket #82</a>, and opened Active Directory Users and Computers. Following the identity-management wiki guide, I went to my working OU, Rquaye-VITI, and created a new user, Eric Quaye, with an initial password. I then created the security group rquaye-catalog (Global scope) in the same OU and added Eric Quaye to it as a member, confirming he appeared in the group's Members list. Finally, I reset his password as a separate action to complete the last requirement from the guide. The OU now contains both groups and both test users.
+
+<br />
+<br />
+
+<p align="right"><a href="#top">⬆ Back to top</a></p>
+
+---
+
+<br />
+<br />
+
+
+
