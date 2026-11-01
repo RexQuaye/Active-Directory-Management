@@ -284,6 +284,66 @@
 
 ---
 
+
+<br />
+<br />
+
+<a name="ticket-84"></a>
+<h1>Ticket #84 — Create a New Organizational Unit</h1>
+
+<h2>Languages and Utilities Used</h2>
+- <b>Remote Desktop Connection (RDP)</b>
+- <b>Active Directory Users and Computers</b>
+
+<h2>Environments Used</h2>
+- <b>Windows Server (Active Directory domain controller, sandbox.prod)</b>
+- <b>Windows client (Remote Desktop)</b>
+<br />
+<h2>Project walk-through:</h2>
+
+**Objective:** Enhance system administration skills through identity management using Active Directory.
+
+**Instructions:**
+1. To add a new Organizational Unit (OU) under the domain, use Active Directory Users and Computers.
+2. The OU should be created under the already-created OU "VITI", named {freeipa_username}-VITI.
+3. Check the separate step-by-step guidance.
+
+**Note on redactions:** In the Active Directory screenshots, other users' OU names in the tree are redacted.
+
+<br />
+<br />
+<br />
+<p align="center">
+<b>Right-clicking the VITI OU &gt; New &gt; Organizational Unit (other users' OUs redacted):</b>
+<br/>
+<img width="735" height="383" alt="image" src="https://github.com/user-attachments/assets/c84c4e54-e674-4c7f-b880-e79a305194ac" />
+
+
+</p>
+
+<br />
+<br />
+<br />
+<p align="center">
+<b>The Rquaye-VITI OU already exists under VITI and contains the groups and users created in Tickets #82 and #83 (other users' OUs redacted):</b>
+<br/><img width="727" height="453" alt="image" src="https://github.com/user-attachments/assets/798bcc2c-1fa4-4f14-b6e9-957718d906f8" />
+
+
+</p>
+
+<br />
+<br />
+<br />
+
+<b><u>Solution:</u></b> I connected to the Active Directory server with Remote Desktop, as in <a href="#ticket-82">Ticket #82</a>, and opened Active Directory Users and Computers. I navigated to sandbox.prod &gt; YellowTail &gt; VITI and right-clicked VITI to create a new organizational unit named Rquaye-VITI, the name this ticket requires ({freeipa_username}-VITI). Active Directory returned a "name already exists" error, which confirmed that Rquaye-VITI was already in place directly under VITI. I had created it while working on <a href="#ticket-82">Ticket #82</a>, using the same naming convention. The OU already holds the groups and users from Tickets #82 and #83, so the ticket's requirement is met.
+
+<br />
+<br />
+
+<p align="right"><a href="#top">⬆ Back to top</a></p>
+
+---
+
 <br />
 <br />
 
