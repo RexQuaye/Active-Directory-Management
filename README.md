@@ -344,8 +344,85 @@
 
 ---
 
+
 <br />
 <br />
+
+<a name="ticket-85"></a>
+<h1>Ticket #85 — Create a New User</h1>
+
+<h2>Languages and Utilities Used</h2>
+- <b>Remote Desktop Connection (RDP)</b>
+- <b>Active Directory Users and Computers</b>
+
+<h2>Environments Used</h2>
+- <b>Windows Server (Active Directory domain controller, sandbox.prod)</b>
+- <b>Windows client (Remote Desktop)</b>
+<br />
+<h2>Project walk-through:</h2>
+
+**Objective:** Enhance system administration skills through identity management using Active Directory.
+
+**Instructions:**
+1. Create a new user within the same Organizational Unit (OU) created in the previous task.
+2. Any user name may be used.
+3. Set the "Password never expires" option and set the password specified in the ticket.
+
+**Note on redactions:** In the Active Directory screenshots, other users' OU names in the tree are redacted.
+
+<br />
+<br />
+<br />
+<p align="center">
+<b>Creating a new user, Rob Santana (logon name rsantana), in the Rquaye-VITI OU:</b>
+<br/>
+<sub><i>Redaction: other users' OU names in the tree are redacted.</i></sub>
+<br/>
+<img width="616" height="517" alt="image" src="https://github.com/user-attachments/assets/672f8069-a596-4be1-a902-1b5f495bb051" />
+
+
+</p>
+
+<br />
+<br />
+<br />
+<p align="center">
+<b>Reviewing the new user's summary before finishing:</b>
+<br/>
+<sub><i>Redaction: other users' OU names in the tree are redacted.</i></sub>
+<br/>
+<img width="632" height="494" alt="image" src="https://github.com/user-attachments/assets/955d4a77-f175-4849-a0bb-44fc631bfd0a" />
+
+
+</p>
+
+<br />
+<br />
+<br />
+<p align="center">
+<b>The new user Rob Santana now appears in the Rquaye-VITI OU:</b>
+<br/>
+<sub><i>Redaction: other users' OU names in the tree are redacted.</i></sub>
+<br/>
+<img width="911" height="537" alt="image" src="https://github.com/user-attachments/assets/681ff4f7-c736-4c17-a215-9b487f828eae" />
+
+
+</p>
+
+<br />
+<br />
+<br />
+
+<b><u>Solution:</u></b> I connected to the Active Directory server with Remote Desktop, as in <a href="#ticket-82">Ticket #82</a>, and opened Active Directory Users and Computers. I navigated to my working OU, Rquaye-VITI (created in <a href="#ticket-82">Ticket #82</a> and confirmed in <a href="#ticket-84">Ticket #84</a>), right-clicked it and chose New &gt; User. I created the user Rob Santana with the logon name rsantana@sandbox.prod and set the account password to the value given in the ticket (not shown here). Rob Santana now appears in the Rquaye-VITI OU alongside the groups and users created in the earlier tickets.
+
+<br />
+<br />
+
+<p align="right"><a href="#top">⬆ Back to top</a></p>
+
+---
+
+
 
 
 
