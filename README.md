@@ -9,7 +9,7 @@
 - 📁 [**Ticket #84** — Create a New Organizational Unit](#ticket-84)
 - 👤 [**Ticket #85** — Create a New User](#ticket-85)
 - 👥 [**Ticket #86** — Create a New User Group](#ticket-86)
-- 📝 [**Ticket #87** — Research and Create Documentation](#ticket-87)
+
 
 
 
