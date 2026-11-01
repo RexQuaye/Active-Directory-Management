@@ -423,6 +423,57 @@
 ---
 
 
+<br />
+<br />
+
+<a name="ticket-86"></a>
+<h1>Ticket #86 — Create a New User Group</h1>
+
+<h2>Languages and Utilities Used</h2>
+- <b>Remote Desktop Connection (RDP)</b>
+- <b>Active Directory Users and Computers</b>
+
+<h2>Environments Used</h2>
+- <b>Windows Server (Active Directory domain controller, sandbox.prod)</b>
+- <b>Windows client (Remote Desktop)</b>
+<br />
+<h2>Project walk-through:</h2>
+
+**Objective:** Enhance system administration skills through identity management using Active Directory.
+
+**Instructions:**
+1. Within the OU created earlier, set up a new user group using the format "rquaye-apprentices".
+2. Add your user account to this group as a member.
+3. Group scope: Global; group type: Security.
+
+**Note on redactions:** In the Active Directory screenshots, other users' OU names in the tree are redacted.
+
+<br />
+<br />
+<br />
+<p align="center">
+<b>Confirming the members of the rquaye-apprentices group on its Members tab:</b>
+<br/>
+<b>Redaction: other users' OU names in the tree are redacted.</b>
+<br/>
+<img width="886" height="787" alt="image" src="https://github.com/user-attachments/assets/aa19e070-134b-4469-9ad1-dd18f3c02c76" />
+
+
+</p>
+
+<br />
+<br />
+<br />
+
+<b><u>Solution:</u></b> I connected to the Active Directory server with Remote Desktop, as in <a href="#ticket-82">Ticket #82</a>, and opened Active Directory Users and Computers. The group rquaye-apprentices already existed in my working OU, Rquaye-VITI, because I created it in <a href="#ticket-82">Ticket #82</a> as a security group with Global scope, which is exactly the format and settings this ticket asks for. On the group's General tab I confirmed the scope is Global and the type is Security. On its Members tab I confirmed that Jim Test is listed as a member, which covers the requirement to add a user to the group. No new objects were needed, so this ticket was satisfied by the work already completed in <a href="#ticket-82">Ticket #82</a>.
+
+<br />
+<br />
+
+<p align="right"><a href="#top">⬆ Back to top</a></p>
+
+---
+
 
 
 
